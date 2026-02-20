@@ -35,9 +35,9 @@ const Navbar = () => {
     <nav className="sticky top-0 w-full z-50 bg-surface border-b border-border shadow-sm">
       <div className="flex items-center justify-between h-24 px-6">
         {/* Logo */}
-        <Link to="/" className="block group flex items-center gap-2">
+        <Link to="/" className="group flex items-center gap-2">
           <img
-            src="/LOGO-1-WHITE-NO-BACKGROUND.png"
+            src="/LOGO-1-WHITE-NO-BACKGROUND.webp"
             alt="Logo"
             className="h-12 w-auto"
           />

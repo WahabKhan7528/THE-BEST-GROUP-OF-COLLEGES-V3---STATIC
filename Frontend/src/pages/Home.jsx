@@ -38,7 +38,7 @@ const Home = () => {
         "Legal Aid Clinic",
         "Distinguished Faculty",
       ],
-      image: "/campuslaw.jpg",
+      image: "/Law.webp",
       path: "/campuses/law",
     },
     {
@@ -57,7 +57,7 @@ const Home = () => {
         "Digital Library",
         "Career Counseling",
       ],
-      image: "/campusmain.jpg",
+      image: "/maincampus.webp",
       path: "/campuses/main",
     },
     {
@@ -77,7 +77,7 @@ const Home = () => {
         "Sports Facilities",
         "Experienced Faculty",
       ],
-      image: "/campus-hala.jpg",
+      image: "/campus-hala.webp",
       path: "/campuses/hala",
     },
   ];
@@ -197,7 +197,7 @@ const Home = () => {
       {/* Hero Section */}
       <Hero
         title="THE BEST GROUP OF COLLEGES"
-        image="/landing-img.png"
+        image="/maincampus.webp"
         announcements={announcements}
         className="mb-12 pl-8 pr-8"
       />
@@ -232,9 +232,10 @@ const Home = () => {
             {/* Replaced gradient background with solid primary color block */}
             <div className="absolute -inset-4 bg-primary-100/50 rounded-3xl transform rotate-2" />
             <img
-              src="/P4.jpg"
+              src="../../public/aboutUs.webp"
               alt="About Us"
               className="relative rounded-2xl shadow-lg border border-border w-full object-cover aspect-square"
+              loading="lazy"
             />
             {/* Floating Badge */}
             <div className="hidden sm:block absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-border">
@@ -306,7 +307,7 @@ const Home = () => {
         </div>
       </Section>
 
-      {/* Campuses Section */}
+     {/* Campuses Section */}
       <Section background="gray" spacing="large">
         <Section.Header
           title="Our Campuses"
@@ -329,11 +330,13 @@ const Home = () => {
                     }`}
                 >
                   {/* College Image */}
-                  <div className="w-full lg:w-2/5 relative overflow-hidden">
+                  <div className="w-full lg:w-2/5 relative overflow-hidden h-64 lg:h-auto">
                     <img
                       src={college.image}
                       alt={college.name}
-                      className="w-full h-64 lg:h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                     <div className="absolute inset-0 bg-primary-900/10" />
                   </div>
